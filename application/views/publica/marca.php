@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="h2 text-center margin-top margin-bottom">Marcas</div>
+	<div class="row">
+		<?php foreach ($marcas as $marca): ?>
+			<?php if ($marca->id > 0): ?>
+				<div class="col-xl-4 col-md-6 col-12">
+					<a href="<?php echo base_url('Inicio/marca/') . $marca->id ?>" class="no-link">
+						<div class="card w-100 margin-top mouse-hand">
+						  <img class="card-img-top" src="https://picsum.photos/500/400/?image=<?php echo $marca->id ?>" alt="Card image cap">
+						  <div class="card-body text-center">
+						    <h5 class="card-title"><?php echo ucfirst($marca->nombre) ?></h5>
+						  </div>
+						</div>
+					</a>
+				</div>
+			<?php endif ?>
+		<?php endforeach ?>
+	
+		
+	</div>
+</div>
